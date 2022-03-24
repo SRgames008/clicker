@@ -25,7 +25,7 @@
       score = score - cursorCost;
         cursors = cursors + 1;
         cpc = cpc + 1;
-        cursorCost = Math.round(cursorCost * 1.35);
+        cursorCost = Math.round(cursorCost * 1.25);
     document.getElementById("score").innerHTML = score;
     document.getElementById("cursorCost").innerHTML = cursorCost;
     document.getElementById("cursors").innerHTML = cursors;
@@ -36,7 +36,7 @@
       if (score >= sugarCost) {
       score = score - sugarCost;
         sugar = sugar + 1;
-        sugarCost = Math.round(sugarCost * 1.35);
+        sugarCost = Math.round(sugarCost * 1.25);
         
    cps = cps + 1;
     document.getElementById("score").innerHTML = score;
