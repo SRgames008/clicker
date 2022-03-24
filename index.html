@@ -5,11 +5,13 @@
   <body>
     <p>Welcome to my clicker game, made with <a href="https://www.youtube.com/watch?v=d-AbDEwpp6g">this tutorial</a></p>
     <p>Score: <span id="score">0</span></p>
-    <img src="clickme.jpeg"></img>
+    <img src="clickme.jpeg" onclick="addToScore(1)"></img>
   <script>
     var score = 0;
-    score = score + 1;
+    function addToScore(amount) {
+    score = score + amount;
     document.getElementById("score").innerHTML = score;
+    }
   </script>
   </body>
 </html>
