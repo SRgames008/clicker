@@ -6,27 +6,52 @@
   <body>
     <p>Welcome to my clicker game, made with <a href="https://www.youtube.com/watch?v=d-AbDEwpp6g">this tutorial</a></p>
     <p>Score: <span id="score">0</span></p>
-    <img src="clickme.jpeg" onclick="addToScore(1)"></img>
-  <button onclick="buyCursor()"> Cursor [<span id="cursorCost">15</span>] -- <span id="cursors">0</span> </button>
+    <img src="clickme.jpeg" onclick="addToScore(cpc)"></img>
+  <button onclick="buyCursor()"> Cursor [<span id="cursorCost">25</span>] -- <span id="cursors">0</span> </button>
+  <button onclick="buySugar()"> Sugar [<span id="sugarCost">100</span>] -- <span id="sugar">0</span> </button>
   
   <script>
     var score = 0;
-    var cursorCost = 15;
+    var cursorCost = 25;
     var cursors = 0;
+    var sugarCost = 100;
+    var sugar = 0;
+    var cps = 0;
+    var cpc = 1
+    
     function buyCursor() {
       if (score >= cursorCost) {
       score = score - cursorCost;
         cursors = cursors + 1;
-        cursorCost = Math.round(cursorCost * 1.15);
+        cps = cps + 1;
+        cursorCost = Math.round(cursorCost * 1.35);
     document.getElementById("score").innerHTML = score;
+    document.getElementById("cursorCost").innerHTML = cursorCost;
+    document.getElementById("cursors").innerHTML = cursors;
+    document.getElementById("cps").innerHTML = cps;
+      }
+    }
+    function buySugar() {
+      if (score >= sugarCost) {
+      score = score - sugarCost;
+        sugar = sugar + 1;
+        sugarCost = Math.round(sugarCost * 1.35);
+        
+   cpc = cpc + 2;
+    document.getElementById("score").innerHTML = score;
+    document.getElementById("sugarCost").innerHTML = sugarCost;
+    document.getElementById("sugar").innerHTML = sugar;
+    document.getElementById("cpc").innerHTML = cpc;
       }
     }
     function addToScore(amount) {
     score = score + amount;
     document.getElementById("score").innerHTML = score;
-    document.getElementById("cursorCost").innerHTML = cursorCost;
-    document.getElementById("cursors").innerHTML = cursors;
     }
+    setInterval(function(){
+      score = score + cps;
+    document.getElementById("score").innerHTML = score;
+    }, 1000); // 1000ms
   </script>
   
   </body>
