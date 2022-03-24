@@ -23,12 +23,12 @@
       if (score >= cursorCost) {
       score = score - cursorCost;
         cursors = cursors + 1;
-        cps = cps + 1;
+        cpc = cpc + 1;
         cursorCost = Math.round(cursorCost * 1.35);
     document.getElementById("score").innerHTML = score;
     document.getElementById("cursorCost").innerHTML = cursorCost;
     document.getElementById("cursors").innerHTML = cursors;
-    document.getElementById("cps").innerHTML = cps;
+    document.getElementById("cpc").innerHTML = cpc;
       }
     }
     function buySugar() {
@@ -37,11 +37,11 @@
         sugar = sugar + 1;
         sugarCost = Math.round(sugarCost * 1.35);
         
-   cpc = cpc + 2;
+   cps = cps + 1;
     document.getElementById("score").innerHTML = score;
     document.getElementById("sugarCost").innerHTML = sugarCost;
     document.getElementById("sugar").innerHTML = sugar;
-    document.getElementById("cpc").innerHTML = cpc;
+    document.getElementById("cps").innerHTML = cps;
       }
     }
     function addToScore(amount) {
