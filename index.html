@@ -2,16 +2,32 @@
   <head>
     <title> Clicker Game </title>
   </head>
+  
   <body>
     <p>Welcome to my clicker game, made with <a href="https://www.youtube.com/watch?v=d-AbDEwpp6g">this tutorial</a></p>
     <p>Score: <span id="score">0</span></p>
     <img src="clickme.jpeg" onclick="addToScore(1)"></img>
+  <button onclick="buyCursor()"> Cursor [<span id="cursorCost">15</span>] -- <span id="cursors">0</span> </button>
+  
   <script>
     var score = 0;
+    var cursorCost = 15;
+    var cursors = 0;
+    function buyCursor() {
+      if (score >= cursorCost) {
+      score = score - cursorCost;
+        cursors = cursors + 1;
+        cursorCost = Math.round(cursorCost * 1.15);
+    document.getElementById("score").innerHTML = score;
+      }
+    }
     function addToScore(amount) {
     score = score + amount;
     document.getElementById("score").innerHTML = score;
+    document.getElementById("cursorCost").innerHTML = cursorCost;
+    document.getElementById("cursors").innerHTML = cursors;
     }
   </script>
+  
   </body>
 </html>
