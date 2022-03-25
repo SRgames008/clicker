@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Palette-Mosaic);
-
 p {
+@import url(https://fonts.googleapis.com/css?family=Palette-Mosaic);
 	font-family: 'Palette Mosaic';
 	fonr-size: 20px;
 }
