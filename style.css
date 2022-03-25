@@ -1,5 +1,7 @@
-p {
+<style>
 @import url(https://fonts.googleapis.com/css?family=Palette-Mosaic);
+</style>
+p {
 	font-family: 'Palette Mosaic';
 	fonr-size: 20px;
 }
@@ -8,14 +10,4 @@ button {
 	background-color: #78c4ff;
 	border: 2px outset #175f96;
 	border-radius: 20px;
-}
-
-img {
-	width: 250px;
-	height: 250px;
-}
-
-img:hover {
-	width: 275px;
-	height: 275px;
 }
